@@ -92,4 +92,64 @@
 	    </div>
 	</div>
 </body>
+							<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .search-container {
+            position: relative;
+            width: 300px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="searchFunction()">
+            🔍
+        </button>
+    </div>
+
+    <script>
+        function searchFunction() {
+            let query = document.getElementById("searchInput").value;
+            if (query) {
+                alert("You searched for: " + query);
+                // You can modify this to redirect or search in a database
+                // Example: window.location.href = "https://www.google.com/search?q=" + query;
+            }
+        }
+    </script>
+
+</body>
+</html>
+							
 </html>
